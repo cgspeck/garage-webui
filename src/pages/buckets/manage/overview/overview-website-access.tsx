@@ -86,31 +86,15 @@ const WebsiteAccessSection = () => {
           </div>
 
           <div className="mt-4 alert flex flex-row flex-wrap text-sm gap-x-2 gap-y-1">
-            <a
-              href={`http://${bucketName}`}
-              className="inline-flex items-center flex-row gap-2 font-medium hover:link"
-              target="_blank"
-            >
-              <LinkIcon size={14} />
-              {bucketName}
-            </a>
             {rootDomain ? (
               <>
                 <a
-                  href={`http://${bucketName}${rootDomain}`}
+                  href={`https://${bucketName}${rootDomain}`}
                   className="inline-flex items-center flex-row gap-2 font-medium hover:link"
                   target="_blank"
                 >
                   <LinkIcon size={14} />
                   {bucketName + rootDomain}
-                </a>
-                <a
-                  href={`http://${bucketName}${rootDomain}:${websitePort}`}
-                  className="inline-flex items-center flex-row gap-2 font-medium hover:link"
-                  target="_blank"
-                >
-                  <LinkIcon size={14} />
-                  {bucketName + rootDomain + ":" + websitePort}
                 </a>
               </>
             ) : null}
