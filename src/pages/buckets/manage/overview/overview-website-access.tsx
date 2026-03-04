@@ -19,7 +19,6 @@ const WebsiteAccessSection = () => {
   });
   const isEnabled = useWatch({ control: form.control, name: "websiteAccess" });
 
-  const websitePort = config?.s3_web?.bind_addr?.split(":").pop() || "80";
   const rootDomain = config?.s3_web?.root_domain;
 
   const updateMutation = useUpdateBucket(data?.id);
